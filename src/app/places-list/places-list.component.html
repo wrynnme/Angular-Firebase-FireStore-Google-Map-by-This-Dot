@@ -1,0 +1,34 @@
+<table class="ui celled table">
+	<thead>
+		<tr>
+			<th><i class="fas fa-map-marker-alt"></i> Place Name</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let p of places">
+			<td>{{ p.name }}</td>
+			<td>{{ p.lat }}</td>
+			<td>{{ p.long }}</td>
+			<td class="actions">
+				<div class="action remove" (click)="onDelete(p.id)">
+					Remove<i class="fas fa-backspace"></i>
+				</div>
+				<div class="action" (click)="onUpdate(p.id, p.visited)">
+					<ng-container *ngIf="p.visited; else notVisited">
+						<span class="visited"
+							>Visited<i class="fas fa-smile-wink"></i
+						></span>
+					</ng-container>
+					<ng-template #notVisited>
+						<span class="not-visited"
+							>Not Visited <i class="fas fa-sad-tear"></i
+						></span>
+					</ng-template>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

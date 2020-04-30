@@ -1,0 +1,13 @@
+<div class="places">
+	<div class="map">
+		<agm-map [latitude]="lat" [longitude]="long" [zoom]="4">
+			<div *ngFor="let p of places">
+				<agm-marker
+					*ngIf="p.visited"
+					[latitude]="p.lat"
+					[longitude]="p.long"
+				></agm-marker>
+			</div>
+		</agm-map>
+	</div>
+</div>

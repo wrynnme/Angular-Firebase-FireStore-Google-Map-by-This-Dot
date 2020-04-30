@@ -1,0 +1,25 @@
+.actions {
+	display: flex;
+	justify-content: space-around;
+	.action {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		i {
+			margin: 2px;
+		}
+	}
+
+	.remove {
+		color: #ff3232;
+	}
+
+	.visited {
+		color: rgb(32, 218, 141);
+	}
+
+	.not-visited {
+		color: rgb(252, 214, 0);
+	}
+}

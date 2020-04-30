@@ -1,0 +1,17 @@
+.places {
+	margin: 18px 18px;
+	.columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: "places-list map";
+	}
+
+	.places-list {
+		grid-area: places-list;
+	}
+
+	.map {
+		grid-area: map;
+	}
+}
